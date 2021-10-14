@@ -4,7 +4,7 @@
 
     --pale-violet: hsl(276, 100%, 81%); /* (sub-heading at the top of the app UI) */
     --moderate-violet: hsl(276, 55%, 52%); /* (chat on the left) */
-    --desaturated-dark-violet: hsl(271, 15%, 43%); /*v(chat on the right)*/
+    --desaturated-dark-violet: hsl(271, 15%, 43%); /*(chat on the right)*/
     --grayish-blue: hsl(206, 6%, 79%); /*(placeholder text)*/
     --darker-desat-violet: hsl(271, 36%, 24%); /*(main heading)*/
     --darker-gray-violet: hsl(270, 7%, 64%);
@@ -13,7 +13,7 @@
 
     /* Gradients */
     
-    --right-violet: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    --right-gradient: linear-gradient(90deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
     --left-gradient: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
     
 
@@ -22,7 +22,7 @@
     --white: hsl(0, 0%, 100%);
     --light-gray-violet: hsl(270, 20%, 96%); /* (app background) */
     --darker-desat-violet: hsl(271, 36%, 24%);
-    --lighter-magenta: hsl(289, 100%, 72%) /* (radio button outline) */
+    --lighter-magenta: hsl(289, 100%, 72%); /* (radio button outline) */
 }
 
 *, *::before, *::after {
@@ -39,4 +39,175 @@ html, body {
 body {
     background-color: var(--light-gray-violet);
     font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
 }
+
+main {
+    width: 85%;
+    margin: auto;
+}
+
+.phone {
+    width: min(100%, 375px);
+    /* background-color: var(--lighter-magenta); */
+    position: relative;
+    display: grid;
+    row-gap: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border: 1rem solid var(--white);
+    border-radius: 2rem;
+}
+
+.phone::before {
+    content: "";
+    background-color: var(--white);
+    position: absolute;
+    padding-top: 2.5rem;
+    border-radius: 1rem;
+    top: -1rem;
+    left: 20%;
+    right: 20%;
+}
+
+/* Header of the App with Profile */
+.phone__header {
+    width: 100%;
+    background: var(--right-gradient);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    padding: 2.5rem .5rem 1rem .5rem;
+}
+
+.phone__header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.phone__header img {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.phone__header p {
+    color: var(--light-gray-violet);
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.phone__header p > span {
+    color: var(--pale-violet);
+    font-size: .5rem;
+    font-weight: 400;
+}
+
+.phone__body {
+    width: 90%;
+    margin: auto;
+}
+
+/* Message box container */
+.phone__body .grey-msg, .white-msg {
+    width: 75%;
+    font-size: .80rem;
+    /* border: 1px solid blue; */
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+}
+
+.phone__body .grey-msg {
+    color: var(--moderate-violet);
+    background-color: var(--light-gray-violet);
+}
+
+.phone__body .white-msg {
+    color: var(--desaturated-dark-violet);
+    background-color: white;
+    margin-left: 25%;
+}
+
+.phone__body > .white-msg + .white-msg {
+    /* background-color: red; */
+    width: fit-content;
+    margin-left: 60%;
+}
+
+.phone__body .dog-img {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5rem;
+    margin: .5rem 0;
+}
+
+.phone__body .dog-img img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+}
+
+.phone__body .msg-price {
+    background: var(--left-gradient);
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    border-radius: .5rem;
+    border-top-left-radius: .85rem;
+    padding: .75rem .5rem;
+    margin: .5rem 0 .5rem 0;
+
+}
+
+.phone__body .msg-price span {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.phone__body .msg-price p {
+    color: var(--white);
+}
+
+/* Type a message box */
+.type-msg {
+    width: 90%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: white;
+    padding: .75rem 1rem;
+    border-radius: 1.5rem;
+    color: var(--grayish-blue);
+}
+
+.type-msg::after {
+    content: "hi";
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--darker-desat-violet);
+    right: 1rem;
+    top: 25%;
+    bottom: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .type-msg::before {
+    content: [type-msg];
+} */
+
+
+
