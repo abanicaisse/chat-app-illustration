@@ -50,13 +50,15 @@ main {
 .phone {
     width: min(100%, 375px);
     /* background-color: var(--lighter-magenta); */
+    margin: auto;
     position: relative;
     display: grid;
     row-gap: 1rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
     border: 1rem solid var(--white);
-    border-radius: 2rem;
+    border-radius: 2.5rem;
+    box-shadow: 5px 30px 100px var(--darker-gray-violet);
 }
 
 .phone::before {
@@ -77,11 +79,11 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;
-    padding: 2.5rem .5rem 1rem .5rem;
+    padding: 2.5rem 1rem 1rem 1rem;
 }
 
 .phone__header > div {
@@ -118,7 +120,7 @@ main {
 /* Message box container */
 .phone__body .grey-msg, .white-msg {
     width: 75%;
-    font-size: .80rem;
+    font-size: .75rem;
     /* border: 1px solid blue; */
     border-radius: .5rem;
     margin-bottom: .5rem;
@@ -127,19 +129,21 @@ main {
 
 .phone__body .grey-msg {
     color: var(--moderate-violet);
-    background-color: var(--light-gray-violet);
+    background-color: hsla(271, 15%, 43%, .05);
 }
 
 .phone__body .white-msg {
     color: var(--desaturated-dark-violet);
     background-color: white;
-    margin-left: 25%;
+    margin-left: calc(100% - 75%);
 }
 
 .phone__body > .white-msg + .white-msg {
     /* background-color: red; */
-    width: fit-content;
-    margin-left: 60%;
+    /* width: fit-content;
+    margin-left: calc(25% + 37%); */
+    width: 7rem;
+    margin-left: calc(100% - 7rem);
 }
 
 .phone__body .dog-img {
@@ -156,10 +160,13 @@ main {
 }
 
 .phone__body .msg-price {
-    background: var(--left-gradient);
-    display: flex;
     width: 85%;
+    background: var(--left-gradient);
+    display: grid;
+    grid-template-columns: 10% 90%;
     justify-content: space-between;
+    align-items: center;
+    column-gap: .5rem;
     border-radius: .5rem;
     border-top-left-radius: .85rem;
     padding: .75rem .5rem;
@@ -167,7 +174,7 @@ main {
 
 }
 
-.phone__body .msg-price span {
+.phone__body .msg-price > span {
     width: 1rem;
     height: 1rem;
     border: 1px solid white;
@@ -176,6 +183,11 @@ main {
 
 .phone__body .msg-price p {
     color: var(--white);
+    font-size: .75rem;
+    display: flex;
+    justify-content: space-between;
+    gap: .2rem;
+    padding-right: 1rem;
 }
 
 /* Type a message box */
@@ -209,5 +221,21 @@ main {
     content: [type-msg];
 } */
 
+/* Booking description section  */
+.booking {
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 3rem;
+}
+
+.booking h1 {
+    color: var(--darker-desat-violet);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.booking p {
+    color: var(--darker-gray-violet);
+}
 
 
