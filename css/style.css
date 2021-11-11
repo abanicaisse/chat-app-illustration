@@ -294,9 +294,9 @@ main::after {
     color: var(--darker-gray-violet);
 }
 
-footer {
+/* footer {
     text-align: center;
-}
+} */
 
 @media screen and (min-width: 1200px) {
     body {
@@ -312,6 +312,7 @@ footer {
     main {
         grid-template-columns: repeat(2, 1fr);
         gap: 0rem;
+        padding: 5rem 0;
         padding-left: 5rem;
     }
     
